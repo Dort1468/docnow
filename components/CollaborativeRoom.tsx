@@ -63,7 +63,7 @@ const CollaborativeRoom = ({
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [documentTitle]);
+  }, [documentTitle, roomId]);
 
   useEffect(() => {
     if (editing && inputRef.current) {
