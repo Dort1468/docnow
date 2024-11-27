@@ -29,7 +29,7 @@ export const DeleteModal = ({ roomId }: DeleteModalProps) => {
       await deleteDocument(roomId);
       setOpen(false);
     } catch (error) {
-      console.log("Error notif:", error);
+      console.log("錯誤訊息:", error);
     }
 
     setLoading(false);
@@ -57,16 +57,15 @@ export const DeleteModal = ({ roomId }: DeleteModalProps) => {
             height={48}
             className="mb-4"
           />
-          <DialogTitle>Delete document</DialogTitle>
+          <DialogTitle>刪除文件</DialogTitle>
           <DialogDescription>
-            Are you sure you want to delete this document? This action cannot be
-            undone.
+            你確定要刪除此文件嗎，此動作不可復原
           </DialogDescription>
         </DialogHeader>
 
         <DialogFooter className="mt-5">
           <DialogClose asChild className="w-full bg-dark-400 text-white">
-            Cancel
+            取消
           </DialogClose>
 
           <Button
@@ -74,7 +73,7 @@ export const DeleteModal = ({ roomId }: DeleteModalProps) => {
             onClick={deleteDocumentHandler}
             className="gradient-red w-full"
           >
-            {loading ? "Deleting..." : "Delete"}
+            {loading ? "刪除中..." : "刪除"}
           </Button>
         </DialogFooter>
       </DialogContent>

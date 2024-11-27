@@ -109,7 +109,7 @@ export const updateDocumentAccess = async ({
         subjectId: notificationId,
         activityData: {
           userType,
-          title: `You have been granted ${userType} access to the document by ${updatedBy.name}`,
+          title: `由 ${updatedBy.name} 所賦予，現在你已獲得 ${userType} 權限，`,
           updatedBy: updatedBy.name,
           avatar: updatedBy.avatar,
           email: updatedBy.email,

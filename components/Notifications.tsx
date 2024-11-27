@@ -42,15 +42,13 @@ const Notifications = () => {
         <LiveblocksUIConfig
           overrides={{
             INBOX_NOTIFICATION_TEXT_MENTION: (user: ReactNode) => (
-              <>{user} mentioned you.</>
+              <>{user}提及了你</>
             ),
           }}
         >
           <InboxNotificationList>
             {unreadNotifications.length <= 0 && (
-              <p className="py-2 text-center text-dark-500">
-                No new notifications
-              </p>
+              <p className="py-2 text-center text-dark-500">沒有新的通知</p>
             )}
 
             {unreadNotifications.length > 0 &&
