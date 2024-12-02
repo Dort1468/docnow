@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 const Header = ({ children, className }: HeaderProps) => {
   return (
-    <div className={cn("header", className)}>
+    <div className={cn("header", className)} data-testid="header">
       <Link href="/" className="left-4 top-4">
         <Image
           src="/assets/icons/docnow-logo-trans.svg"
